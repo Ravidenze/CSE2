@@ -23,12 +23,21 @@ import java.util.Scanner; //Sets up the ability of inputs from the user
             
             
                     //Variables for user input and their respective instructions
-                    System.out.print("Enter a number which you wish to cube in the form of (xx.xx): ");
-                        double nForCubing = myScanner.nextDouble();//Actually taking in the number for cubing
+                    System.out.print("Enter a number which you wish to cube root in the form of (xx.xx): ");
+                        double nForCubing = myScanner.nextDouble();//Actually taking in the number for cubedrooting
                    
-                   System.out.println("The cubed root of "+ (nForCubing) +" is ("+nForCubing+"*"+nForCubing+"*"+nForCubing+") which is equal to " +(nForCubing*nForCubing*nForCubing)+ ".");//Printing the cubed root
+                   
+                   double cubedRoot;
+                   cubedRoot= Math.pow(nForCubing, (1.0/3));
+                   
+                   
+                    System.out.println("The cubed root of "+ (nForCubing) +" is " +(cubedRoot)+ ".");//Printing the cubed root
+                    System.out.println("("+cubedRoot+"*"+cubedRoot+"*"+cubedRoot+") is equal to " +(cubedRoot*cubedRoot*cubedRoot)+ "");//Printing out what the sample looks like
+                   
                    //I don't like the way that this prints out, but this is what the example looked like...so yea haha
-                
+    
+    
+   
     }   //End of the main method
 } //End of class
 
