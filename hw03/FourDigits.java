@@ -30,12 +30,12 @@ import java.util.Scanner; //Sets up the ability of inputs from the user
            
            
                                 //Equations to find the first four decimals
-                                decAlone=((int)nDecimal)-nDecimal;//converts inputed number to only the decimal typed in
+                                decAlone=((int)(nDecimal)-nDecimal);//converts inputed number to only the decimal typed in
                                 decAloneMult=decAlone*10000;//takes that decimal found above and brings the first four digits in it in front of the decimal
-                                decInt=(-1)*(int)decAloneMult;//converts the immidiate number above to a integer -- effectivly giving the answer
+                                decInt=(-1)*(int)(decAloneMult);//converts the immidiate number above to a integer -- effectivly giving the answer
                                 
                    
-                   
+                   System.out.println(""+(decAlone)+"");
                 System.out.println("The first four digits of the decimal for the number you inputed are: ");//telling the user whats happening with his/her input
                     
                 System.out.println(""+ ((int)decInt*100)/100 +"");//Printing the first four digits of the decimal
