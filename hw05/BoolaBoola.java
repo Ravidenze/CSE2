@@ -106,7 +106,7 @@ import java.util.Scanner; //Sets up the ability of inputs from the user -- multi
                                     return;
                                 }
                                 else{
-                                    System.out.println("You did not enter a valid Soda choice. ");//Printing out that the user made an error
+                                    System.out.println("You did not enter a valid Character. ");//Printing out that the user made an error
                                     return;
                                 }
                         }
