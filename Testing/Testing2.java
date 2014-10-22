@@ -7,7 +7,7 @@
 import java.util.Scanner; //Sets up the ability of inputs from the user
 
 //define class
-public class Testing {
+public class Testing2 {
     //add main method -- required for every Java Program
     public static void main(String[] args) {
 
@@ -29,42 +29,45 @@ public class Testing {
             int y = 0;
 
 
-            while (q < nUser) {
+            do {
 
-                while (w < q + 1) {
+                 do {
 
-                    while (e < (nUser - q)) {
+                     do {
                         System.out.print(" ");
                         e++;
-                    }
+                    }while (e < (nUser - q));
                     e = 0;
 
-                    while (r < ((q * 2) + 1)) {
+                    do {
                         System.out.print(q + 1);
                         r++;
-                    }
+                    }while (r < ((q * 2) + 1)) ;
                     r = 0;
                     System.out.println();
 
                 w++;
-                }
+                }while (w < q + 1);
+                
+                
+                
                 w = 0;
 
-                while (t < (nUser - q)) {
+                do {
                     System.out.print(" ");
                     t++;
-                }
+                }while (t < (nUser - q)) ;
                 t=0;
 
-                while (y < ((q * 2) + 1)) {
+                 do{
                     System.out.print("-");
                     y++;
-                }
+                }while (y < ((q * 2) + 1));
                 y=0;
                 System.out.println();
 
             q++;
-            }
+            }while (q < nUser);
 
 
 
