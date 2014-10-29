@@ -30,46 +30,39 @@ public class Testing2 {
 
 
             do {
-
-                 do {
-
-                     do {
+                do {
+                    do {
                         System.out.print(" ");
                         e++;
-                    }while (e < (nUser - q));
+                    } while (e < (nUser - q));
                     e = 0;
 
                     do {
                         System.out.print(q + 1);
                         r++;
-                    }while (r < ((q * 2) + 1)) ;
+                    } while (r < ((q * 2) + 1));
                     r = 0;
+                    
                     System.out.println();
-
-                w++;
-                }while (w < q + 1);
-                
-                
-                
+                    w++;
+                } while (w < q + 1);
                 w = 0;
 
                 do {
                     System.out.print(" ");
                     t++;
-                }while (t < (nUser - q)) ;
-                t=0;
+                } while (t < (nUser - q));
+                t = 0;
 
-                 do{
+                do {
                     System.out.print("-");
                     y++;
-                }while (y < ((q * 2) + 1));
-                y=0;
+                } while (y < ((q * 2) + 1));
+                y = 0;
+                
                 System.out.println();
-
-            q++;
-            }while (q < nUser);
-
-
+                q++;
+            } while (q < nUser);
 
         } //ending void
 
