@@ -75,41 +75,55 @@ return (scan.nextInt()+"");                                                     
 
 
 
-public static int allBlocks(int run){ //The start for the method called for above by the unchangeable code -- this is a direct copy of a pat homework which creates a stack of numbers and dashes based on a user input -- the user input being 'm' changed here to 'run'
+public static int allBlocks(int x){ //The start for the method called for above by the unchangeable code -- this is a direct copy of a pat homework which creates a stack of numbers and dashes based on a user input -- the user input being 'm' changed here to 'run'
 
-//Setting up variables to be used for my for loops
-        int q = 0;//Runs the farthest outside loop --descriptions of what each loop does follow below
-        int w = 0;//Runs Second nested loop overall
-        int e = 0;//Runs First loop nested in Second overall loop
-        int r = 0;//Runs Second loop nested in Second overal loop
-        int t = 0;//Runs Third loop
-        int y = 0;//Runs Fourth loop    
-    
-    for (q = 0; q < run; q++) { //Starts the main loop which runs from zero to the inputted number
+    int q = 0;                                                                  //Runs the farthest outside loop --descriptions of what each loop does follow below
+    for (q = 0; q < x; q++) {                                                   //Starts the main loop which runs from zero to the inputted number and holds the methods
+                int RunSpacesandNumbers = block(x,q);                           //Calling the program to a method which produces the appropriate block of numbers based on the changing opperator q which goes to x
+                int RunSpacesandDashes = line(x,q);                             //Calling the program to a method which produces the appropriate number of spaces before the line of dashes and actually prints that line
+    }                                                                           //closeing for loop which runs my entire method
+            
+return ' ';                                                                     //Was getting a return statement error again because the program needs to end in main method, so I went ahead and returned nothing because my program is finished here                           
+}
 
-                for (w = 0; w < q + 1; w++) {                                   //Dictates how many lines of each number counting upwards from 1 to the input must be displayed -- number of lines equal to input
 
-                    for (e = 0; e < (run - q); e++) {                           //Gives the approriate number of spaces before printing the actual needed number
-                        System.out.print(" ");                                  //Print statement for a space
-                    }//end loop
 
-                    for (r = 0; r < ((q * 2) + 1); r++) {                       //The equation for how many times each number should be printed in a specific line -- loop runs the print statement that many times
-                        System.out.print(q + 1);                                //Print statement for number in line
-                    }
-                    System.out.println();                                       //Printing out a line before entering next loops
+public static int block(int x, int q){ //The method called to from above --Description line 82
+    int w = 0;                                                                  //Runs Outside loop for obtaining correct spacing before each set of number blocks
+    int e = 0;                                                                  //Runs First loop nested which specifically controls how many spaces come before each line in the block
+    int r = 0;                                                                  //Runs Second loop nested which specifcally controls how many numbers get printed in this block
+     
+     for (w = 0; w < q + 1; w++) {                                              //Dictates how many lines of each number counting upwards from 1 to the input must be displayed -- number of lines equal to input
+
+                for (e = 0; e < (x - q); e++) {                                 //Gives the approriate number of spaces before printing the actual needed number
+                    System.out.print(" ");                                      //Print statement for a space controlled by opperator line above
+                }                                                               //end loop
+
+                for (r = 0; r < ((q * 2) + 1); r++) {                           //The equation for how many times each number should be printed in a specific line -- loop runs the print statement that many times
+                    System.out.print(q + 1);                                    //Print statement for number in line
                 }
+                System.out.println();                                           //Printing out a line before returning to AllBlocks method and running the line method which will bring me my line of dashes
+}
+return ' ';   
+}
 
 
-                for (t = 0; t < (run - q); t++) {                               //Gives the approriate number of spaces before printing the dashes
-                    System.out.print(" ");                                      //Print statement for a space
+
+public static int line(int x, int q){ //The method called to above -- description line 83
+    int t = 0;                                                                  //Runs loop giving me appropriate number of spaces before printing dashes for the line
+    int y = 0;                                                                  //Runs loop for the actual amount of dashes which make up the line   
+            
+                for (t = 0; t < (x - q); t++) {                                 //Gives the approriate number of spaces before printing the dashes
+                    System.out.print(" ");                                      //Print statement for a space based on line-above opperator
                 }
 
                 for (y = 0; y < ((q * 2) + 1); y++) {                           //The equation for how many times a dash should be printed in a specific line -- loop runs the print statement that many times
                     System.out.print("-");                                      //Printing the dash
                 }
-                System.out.println();                                           //Printing out a line for space before running through the whole thing again
-            }//the entire for loop part contained here
-return ' '; //Was getting a return statement error again because the program needs to end in main method, so I went ahead and returned nothing because my program is finished here                           
+                System.out.println();                                           //Printing out a line for space before returning to AllBlocks method which will run itself again
+
+return ' ';    
 }
+
 
 }//Closing the main class
