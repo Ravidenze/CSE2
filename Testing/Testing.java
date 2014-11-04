@@ -6,15 +6,33 @@
 
 import java.util.Scanner; //Sets up the ability of inputs from the user
 
-Public class Increment{
-public void static increment( int input ){
-	input++;
-    printl(“I increased the input”);
-}
+
 public static void main(String[] args){
-	int x =1;
+/*	int x =1;
 	println("be" + x);fore the call
 	increment(x);
 	…println(“After the call, x= ” + x);
+
+*/
+
+Scanner sc=new Scanner(System.in);
+try
+{
+  System.out.println("Please input an integer");
+  //nextInt will throw InputMismatchException
+  //if the next token does not match the Integer
+  //regular expression, or is out of range
+  int usrInput=sc.nextInt();
 }
-}
+
+catch(InputMismatchException exception)
+{
+  //Print "This is not an integer"
+  //when user put other than integer
+  System.out.println("This is not an integer");
+
+}}
+
+
+
+
