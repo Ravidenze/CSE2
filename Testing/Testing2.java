@@ -10,60 +10,24 @@ import java.util.Scanner; //Sets up the ability of inputs from the user
 public class Testing2 {
     //add main method -- required for every Java Program
     public static void main(String[] args) {
+int i;
+int temp =1;
 
-            //Finalizes allowing user input -- the first input
-            Scanner Ask;
-            Ask = new Scanner(System.in);
+//for(i=0; i<4; i++){
 
-            //Asking the user for an integer between 1 and 9
-            System.out.print("Enter a number between 1 and 9: "); //Instructions for the user regarding input needed
-            int nUser = Ask.nextInt(); //Actually taking the integer from the user
-
-
-            //Setting up variables to be used for my for loops
-            int q = 0;
-            int w = 0;
-            int e = 0;
-            int r = 0;
-            int t = 0;
-            int y = 0;
+    
+    for(int j=0; j<6; j++){
+        
+        for(int k=0; k<j+1; k++){
+            
+            System.out.print( temp );
+            
+        }
+        System.out.println();
+    }
+     temp=temp*2;
+//}
 
 
-            do {
-                do {
-                    do {
-                        System.out.print(" ");
-                        e++;
-                    } while (e < (nUser - q));
-                    e = 0;
-
-                    do {
-                        System.out.print(q + 1);
-                        r++;
-                    } while (r < ((q * 2) + 1));
-                    r = 0;
-                    
-                    System.out.println();
-                    w++;
-                } while (w < q + 1);
-                w = 0;
-
-                do {
-                    System.out.print(" ");
-                    t++;
-                } while (t < (nUser - q));
-                t = 0;
-
-                do {
-                    System.out.print("-");
-                    y++;
-                } while (y < ((q * 2) + 1));
-                y = 0;
-                
-                System.out.println();
-                q++;
-            } while (q < nUser);
-
-        } //ending void
-
+}
 } //Ending class
