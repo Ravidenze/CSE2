@@ -4,23 +4,34 @@
  * remaining. It does not always work. Find out when it doesn't
  */
 
+
+//import scanner
 import java.util.Scanner;
+
+//define class
 public class Enigma1{
-  public static void main(String []arg){
-    double percent;
+    
+    //define main method
+    public static void main(String [] arg){
+    
+    //declare instance of scanner
+    Scanner Scanner;
+    Scanner = new Scanner(System.in);
+    
     System.out.print("Enter a value for the percent (0, 1,...99)- ");
-    double x=((new Scanner(System.in)).nextDouble());
-   System.out.println("You entered "+x+"%");
-   //print out the proportion remaining for select percentages
-   if(1-x/100==0.93)  //when the user enters 7
+    double x = Scanner.nextDouble();
+    System.out.println("You entered "+x+"%");
+    
+    //print out the proportion remaining for select percentages
+    if((100-x)/100==0.93)  //when the user enters 7
       System.out.println("The proportion remaining is "+0.93);
-    else if(1-x/100==0.59)//when the user enters 41
+    else if((100-x)/100==0.59)//when the user enters 41
       System.out.println("The proportion remaining is "+0.59);
-    else if(1-x/100==0.86)//when the user enters 14
+    else if(100-x/100==0.86)//when the user enters 14
       System.out.println("The proportion remaining is "+0.86);
-    else if(1-x/100==0.67)//when the user enters 33
+    else if((100-x)/100==0.67)//when the user enters 33
       System.out.println("The proportion remaining is "+0.67);
-    else if(1-x/100==0.4)//when the user enters 60
+    else if(100-x/100==0.4)//when the user enters 60
       System.out.println("The proportion remaining is "+0.40);
    }
 }
@@ -30,8 +41,8 @@ public class Enigma1{
  *    and fix the errors)
  *    Hint: What kinds of input are unacceptable? What kinds of
  *        acceptable input don't produce the correct answer?
- * 
- * 
+ *    it works for 7, 41, 14, 33, 60........
+ *    If the comments are supposedly correct, needed to change a few numbers in the if statements
  * 
  * 
  */

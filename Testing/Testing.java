@@ -12,27 +12,20 @@ import java.util.Scanner;
 public class Testing {
 	public static void main(String [] args){
 
-int i=-1;
-int j;
-//int a=0;
-int b=0;
-int c=1;
-System.out.println("[START]");
+int [] A = {4, 2, 25};
 
-			
-			for(j=0; j<6; j++){		
-					
-					for(i=i; i<j; i++){
-					System.out.println("[" +(c)+ "]");		
-					}
-					
-					b++;
-					c=(c+b);
-			}
+System.out.println(A[i]);
 
-
-System.out.println("[END]");		
-		
+int [] B = new int[A.length];
+int j = 1; 
+int maxlength = A.length; 				
+				
+				for (int i=0; i<A.length; i++){
+				B[maxlength-j]=A[i];
+				j++;
+				System.out.print(B[i]+ " ");
+				}
+				System.out.println();
 	}
 }
 
